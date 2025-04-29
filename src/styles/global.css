@@ -1,0 +1,30 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  @font-face {
+    font-family: 'specailGothic';
+    src: url('/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+  
+  }
+  
+  @font-face {
+    font-family: 'roboto';
+    src: url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  
+  }
+  
+  @font-face {
+    font-family: 'rubik';
+    src: url('/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+  
+  } 
