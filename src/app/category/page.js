@@ -69,7 +69,7 @@ const CategoryPage = () => {
       <div className="action-wrapper">
         <ActionBar />
       </div>
-      <h4 className="page-container tag">For You</h4>
+      <h4 className="page-container tag font-semibold">For You</h4>
       <div className="product-list">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />

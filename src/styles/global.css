@@ -13,18 +13,18 @@
   
   @font-face {
     font-family: 'specailGothic';
-    src: url('/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
   
   }
   
   @font-face {
     font-family: 'roboto';
-    src: url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('/assets/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
   
   }
   
   @font-face {
     font-family: 'rubik';
-    src: url('/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
   
   } 

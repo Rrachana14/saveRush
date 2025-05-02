@@ -79,6 +79,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
 }
 .header-actions.no-header-actions {
   display: none;
@@ -185,7 +186,7 @@
 }
 
 .thumbnail-image.selected {
-  border: 2px solid #007bff;
+  border: 2px solid #2e00b2;
 }
 
 .thumbnail-image:hover {
@@ -263,7 +264,7 @@
   font-weight: 600;
   margin-top:40px;
   margin-bottom: 5px;
-  font-family: rubik;
+  font-family: sans-serif;
 }
 
 .hide-header {
@@ -333,9 +334,8 @@
   align-items: center;
   gap: 5px;
   color: rgb(12, 145, 12);
-
   font-size: 1.2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:  sans-serif;
   border: none;
   cursor: pointer;
   margin-top: 8px;
@@ -366,7 +366,7 @@
 .product-similarProduct h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  font-family: rubik;
+  font-weight: 500;
 }
 
 /* MEDIA QUERY */
@@ -491,7 +491,7 @@
   }
   .product-image-slider {
     border: none;
-    height: 360px;
+    height: 400px;
     padding: auto;
   }
   .product-header {

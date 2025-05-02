@@ -20,18 +20,18 @@ const SimilarProducts = ({ currentProductId, products }) => {
             <p className='bg-[#efefef] py-[2px] px-[9px] text-xs rounded-lg'>450g</p>
             <p className='bg-[#efefef] py-[2px] px-[9px] text-xs rounded-lg'>6 months</p>
           </div>
-          <p className="similar-product-name text-left text-base font-semibold mt-1 ml-1 max-[450px]:text-[0.8rem] max-[413px]:text-[1.1rem]">{product.name}</p>
+          <p className="similar-product-name text-left text-base  mt-1 ml-1 max-[450px]:text-[0.8rem] max-[413px]:text-[1rem] font-sans">{product.name}</p>
 
           <p className="similar-product-rating text-[14px] text-[#f4b400] my-1 ml-1">
             {"★".repeat(Math.round(product.rating))}
-            {"☆".repeat(5 - Math.round(product.rating))} <span>(100)</span>
+            {"☆".repeat(5 - Math.round(product.rating))} <span className='text-gray-600'>(100)</span>
           </p>
           <p className="similar-product-time flex items-center text-xs uppercase gap-1 ml-1">
             <span className="clock-icon text-green-500 text-sm">🕒</span> 10 MINS
           </p>
-          <p className='similar-product-offer text-[#0d5d9e] font-bold text-xs ml-1'>6% OFF</p>
-          <p className="similar-product-price text-[#333] text-base font-semibold absolute bottom-[1.7px] left-[4%] max-[450px]:text-[0.9rem] max-[413px]:text-[0.8rem]">₹{product.price}</p>
-          <button className="add-button absolute top-[87px] right-[5px] bg-white border-2 border-[#28a745] text-[#28a745] py-1 px-3 rounded-sm text-sm font-semibold cursor-pointer">ADD</button>
+          <p className='similar-product-offer text-[#2e00b2] font-bold text-xs ml-1'>6% OFF</p>
+          <p className="similar-product-price font-semibold text-[#333] text-base font-[sans-serif] absolute bottom-[2px] left-[4%] max-[450px]:text-[1rem] ">₹{product.price}</p>
+          <button className="add-button absolute top-[95px] right-[2px] bg-white border-2 border-[#b3ff53] text-[#b3ff53] py-1 px-3 rounded-sm text-sm font-extrabold cursor-pointer font-sans">ADD</button>
         </div>
       ))}
     </div>

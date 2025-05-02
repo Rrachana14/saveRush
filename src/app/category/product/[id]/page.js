@@ -188,7 +188,7 @@ const ProductDetailPage = () => {
         </div>
 
         <div className="product-similarProduct">
-          <h3>Similar Products</h3>
+          <h3 >Similar Products</h3>
           <SimilarProducts currentProductId={product.id} products={products} />
         </div>
       </div>

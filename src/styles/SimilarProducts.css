@@ -1,4 +1,6 @@
-
+.similar-products-section h3 {
+  font-family: sans-serif;
+}
   @media (max-width: 450px) {
     .similar-products-container{
       gap: 0.5rem;
@@ -7,8 +9,6 @@
     .similar-products-section h3 {
       font-size: 1rem;
     }
-
-
 
     .similar-product-rating {
       font-size: 12px;
@@ -26,8 +26,6 @@
       font-size: 9px;
     }
 
-    
-
     .similar-product-card .flex-box p {
       font-size: 8px;
     }
@@ -39,8 +37,6 @@
   }
 
   @media (max-width: 413px) {
-
-
   
     .similar-products-section h3 {
       font-size: 1rem; 

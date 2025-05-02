@@ -17,8 +17,8 @@ const CategoryBanner = ({
     <div className="category-banner flex m-4 p-2 bg-white shadow-md rounded-xl h-[135px] z-10">
       <img src={imagePath} alt={categoryName} className="category-banner-img w-[35%] h-[95%] object-cover rounded-xl mr-3 transition-transform duration-300 ease-in-out" />
       <div className="banner-content flex flex-col ">
-        <h2 className="text-[24.3px] font-medium font-[rubik] mt-[3px]">{categoryName}</h2>
-        <p className="text-[14.3px] font-normal text-[#252422] font-serif">Delicious {categoryName} dishes just for you.</p>
+        <h2 className="text-[24.8px] font-bold mt-[3px]">{categoryName}</h2>
+        <p className="text-[14.3px] font-normal text-[#252422] ">Delicious {categoryName} dishes just for you.</p>
 
         <div className="category-meta flex flex-col gap-1 text-[#333]">
           <div className="rating text-[12px] font-semibold">

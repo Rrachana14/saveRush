@@ -106,7 +106,7 @@ export default function ScheduleOrder() {
   
   useEffect(() => {
     if (!isTimeValid) {
-      const timer = setTimeout(() => setShowPopup(false), 5000);
+      const timer = setTimeout(() => setShowPopup(false), 4000);
       return () => clearTimeout(timer);
     }
   }, [isTimeValid]);
@@ -210,7 +210,7 @@ export default function ScheduleOrder() {
                   className={`p-2 text-md rounded cursor-pointer aspect-square flex items-center justify-center transition-all 
             ${
               date.toDateString() === startDate.toDateString()
-                ? "bg-green-500 text-white font-bold"
+                ? "bg-[#b3ff53] text-white font-bold"
                 : isDeliveryDay(date)
                 ? "bg-blue-500 text-white"
                 : "hover:bg-gray-100"
@@ -232,7 +232,7 @@ export default function ScheduleOrder() {
 
         <div className="bg-white w-full flex justify-end gap-4 px-4 py-2.5 shadow-md rounded-b-xl z-10">
           <div className="flex items-center gap-2">
-            <div className="bg-green-500 w-3 h-3 rounded-full flex items-center justify-center"></div>
+            <div className="bg-[#b3ff53] w-3 h-3 rounded-full flex items-center justify-center"></div>
             <p className="text-xs font-semibold">Start Date</p>
           </div>
           <div className="flex items-center gap-2">
@@ -275,13 +275,13 @@ export default function ScheduleOrder() {
   return (
     <div className="scheduleOrder min-h-screen bg-blue-900 flex justify-center items-center ">
       {isScheduleVisible ? (
-        <div className="w-full max-w-md max-h-screen  bg-gradient-to-b from-[#ffeede] to-[#fff] rounded-2xl shadow-xl px-1 pt-1 space-y-4 border border-black relative overflow-hidden">
+        <div className="w-full max-w-md h-auto  bg-gradient-to-b from-[#ffeede] to-[#dad6d6] rounded-2xl shadow-xl px-1 pt-1 space-y-2 border border-black relative overflow-y">
           {/* HEADER */}
           <div className="flex  items-center justify-between mx-4 mt-2 mb-4">
             <button className="text-blue-700 hover:text-blue-700">
               <CalendarIcon className="h-6 w-6" />
             </button>
-            <h2 className="text-xl font-medium text-center max-[350px]:text-md">
+            <h2 className="text-xl font-medium text-center max-[400px]:text-md">
               SCHEDULE ORDER
             </h2>
             <button onClick={() => setIsScheduleVisible(false)}>
@@ -289,9 +289,9 @@ export default function ScheduleOrder() {
             </button>
           </div>
 
-          <div className="relative w-full max-w-md px-4 pt-4 space-y-4">
+          <div className="relative w-full max-w-md px-4 pt-4 space-y-2">
             {/* PRODUCT CART */}
-            <div className="bg-white  rounded-xl shadow-sm">
+            <div className="bg-white  rounded-md shadow-sm">
               <div className="flex items-center gap-1.5 p-3">
                 <img
                   src="/images/download.jpeg"
@@ -315,14 +315,14 @@ export default function ScheduleOrder() {
                   </div>
                 </div>
               </div>
-              <div className="text-gray-500 bg-gray-50 text-center text-xs font-semibold py-1 rounded-b-xl ">
+              <div className="text-gray-500 bg-gray-50 text-center text-xs font-semibold py-1 rounded-b-xl  ">
                 Product price may vary based on the market changes
               </div>
             </div>
 
             {/* STEP - 1*/}
-            <div className="bg-white p-3 rounded-xl shadow-sm">
-              <div className="flex gap-2.5">
+            <div className="bg-white p-3 rounded-md shadow-sm max-[400px]:px-1 ">
+              <div className="flex gap-2.5 ">
                 <div className="w-5 h-5 rounded-full bg-black text-sm text-white flex items-center justify-center ">
                   1
                 </div>
@@ -330,7 +330,7 @@ export default function ScheduleOrder() {
                   Selected Plan
                 </p>
               </div>
-              <div className="ml-5 text-xs mb-3.5 font-bold  text-gray-600 text-start">
+              <div className="ml-3 text-xs mb-3.5 font-bold  text-gray-600 text-start ">
                 {plan === "alternate" && (
                   <p>Items delivered on the gap of one day.(ex Mon,Wed,Fri)</p>
                 )}
@@ -342,7 +342,7 @@ export default function ScheduleOrder() {
                 )}
               </div>
 
-              <div className="ml-5 w-full flex  justify-items-start gap-2.5 ">
+              <div className="ml-3 w-full flex  justify-items-start gap-2.5 max-[400px]:text-xs max-[400px]:gap-1.5">
                 <button
                   onClick={() => setPlan("one-time")}
                   className={
@@ -387,7 +387,7 @@ export default function ScheduleOrder() {
             </div>
 
             {/* STEP -2 */}
-            <div className="bg-white p-3 rounded-xl shadow-sm">
+            <div className="bg-white p-3 rounded-md shadow-sm">
               <div className="flex mb-1.5 gap-2.5 items-center">
                 <div className="w-5 h-5 rounded-full bg-black text-sm text-white flex items-center justify-center">
                   2
@@ -415,7 +415,7 @@ export default function ScheduleOrder() {
                       Weekends
                     </button>
                   </div>
-                  <div className="flex gap-2 flex-wrap justify-center mb-4">
+                  <div className="flex gap-2 flex-wrap justify-center mb-4 max-[400px]:text-xs">
                     {["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"].map((day) => (
                       <button
                         key={day}
@@ -436,9 +436,9 @@ export default function ScheduleOrder() {
                 <span className="text-sm font-medium text-gray-700">
                   Quantity:
                 </span>
-                <div className="flex items-center h-3 gap-2">
+                <div className="flex items-center h-3 gap-2 ">
                   {quantity === 0 ? (
-                    <button className="p-2 bg-blue-100 rounded hover:bg-blue-200 text-blue-600">
+                    <button className="p-2 bg-blue-100 rounded hover:bg-blue-200 text-blue-600 ">
                       <RiDeleteBin6Line size={24} />
                     </button>
                   ) : (
@@ -456,7 +456,7 @@ export default function ScheduleOrder() {
 
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="px-3  flex items-center justify-center py-1 text-2xl text-white font-semibold bg-blue-500 rounded-md hover:bg-blue-600"
+                    className="px-3  flex items-center justify-center py-1 text-2xl text-white font-semibold bg-blue-500 rounded-md hover:bg-blue-600 "
                   >
                     +
                   </button>
@@ -465,7 +465,7 @@ export default function ScheduleOrder() {
             </div>
 
             {/* STEP -3 */}
-            <div className="bg-white p-3 rounded-xl shadow-sm">
+            <div className="bg-white p-3 rounded-md shadow-sm">
               <div className="flex gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-black text-xs text-white flex items-center justify-center ">
                   3
@@ -477,7 +477,7 @@ export default function ScheduleOrder() {
                   delivery starts from
                 </p>
                 <div className="flex gap-2">
-                  <span className="bg-blue-400 px-2 py-2 rounded-md text-sm font-bold text-white">
+                  <span className="bg-blue-400 px-2 py-2 rounded-md text-sm font-bold text-white max-[400px]:text-xs max-[400px]:rounded-sm">
                     {startDate.toLocaleDateString("en-GB", {
                       day: "numeric",
                       month: "long",
@@ -494,7 +494,7 @@ export default function ScheduleOrder() {
             </div>
 
             {/* STEP-4 */}
-            <div className="bg-white p-3 rounded-xl shadow-sm">
+            <div className="bg-white p-3 rounded-md shadow-sm">
               <div className="flex gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-black text-xs text-white flex items-center justify-center ">
                   4
@@ -504,12 +504,12 @@ export default function ScheduleOrder() {
                 </p>
               </div>
                 <div className="mt-4">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center ">
                     <input
                       type="time"
                       value={deliveryTime}
                       onChange={handleTimeChange}
-                      className={`p-3 rounded-lg border-2 ${
+                      className={`p-3 rounded-lg border-2 max-[400px]:text-[13px]  max-[400px]:p-1.5${
                         isTimeValid
                           ? "border-gray-300 focus:border-[#2e00b2]"
                           : "border-red-400"
@@ -544,7 +544,7 @@ export default function ScheduleOrder() {
               {/* )} */}
             </div>
 
-            <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 mb-2.5" disabled={!isTimeValid} onClick={()=>{
+            <button className="w-full bg-[#2e00b2] text-white font-bold py-2 rounded-md hover:bg-blue-700 mb-2.5 " disabled={!isTimeValid} onClick={()=>{
               console.log("click")
               handleConfirmOrder();
             }}>
@@ -566,7 +566,7 @@ export default function ScheduleOrder() {
           onClick={() => setIsScheduleVisible(true)
           }
           
-          className="bg-[#2e00b2] text-white py-2 px-4 rounded-md hover:bg-blue-700"
+          className="bg-[#2e00b2] text-white py-2 px-4 rounded-md hover:bg-blue-700 "
         >
           Schedule Order
         </button>
